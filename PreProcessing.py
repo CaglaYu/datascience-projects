@@ -1,5 +1,5 @@
 import pandas as pd
-
+import sqlite3
 #form the dataframe fromcsv file with setting the first two rows as header
 Data_Set1=pd.read_csv("Data_Set.csv",header=2)
 
@@ -22,8 +22,11 @@ myval=Data_Set4.index[Data_Set4["E_Heat"]==Data_Set4["E_Heat"].min() ].tolist()[
 
 #change column values based on their value
 Data_Set4.loc[Data_Set4["E_Heat"]==-4,"E_Heat"]=21
-print(Data_Set4.head(46))
+#print(Data_Set4.head(46))
 
+
+df=pd.read_csv("saşes_data.csv")
+print(df.head())
 
 
 
